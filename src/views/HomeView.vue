@@ -56,7 +56,7 @@
   }
 
   onMounted(() => {
-    axios.get('http://127.0.0.1:8000/api/ejemplares/')
+    axios.get('https://liban.onrender.com/api/ejemplares/')
       .then(response => {
         ejemplares.value = response.data
         filteredEjemplares.value = ejemplares.value

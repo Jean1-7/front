@@ -57,7 +57,7 @@
 <script>
 import axios from 'axios';
 const axiosInstance = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api/',
+  baseURL: 'https://liban.onrender.com/api/',
   headers: {
     'Authorization': 'Token dcf9db5025fd0d9487a994d1a62b76abb5445970' 
   }

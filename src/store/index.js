@@ -55,7 +55,7 @@ const store = createStore({
   actions: {
     async login({ commit }, credentials) {
       try {
-        const response = await axios.post('http://127.0.0.1:8000/api/login/', credentials);
+        const response = await axios.post('https://liban.onrender.com/api/login/', credentials);
         const { token, user } = response.data;
         commit('setToken', { token, user_id: user.id, username: user.username});
         localStorage.setItem('token', token);
@@ -73,7 +73,7 @@ const store = createStore({
     },
     async fetchCart({ commit, state }) {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/carritos/', {
+        const response = await axios.get('https://liban.onrender.com/api/carritos/', {
           headers: {
             Authorization: `Token ${state.token}`
           }
@@ -85,7 +85,7 @@ const store = createStore({
     },
     async addToCart({ commit, state }, ejemplar) {
       try {
-          const response = await axios.post('http://127.0.0.1:8000/api/carritos/', {
+          const response = await axios.post('https://liban.onrender.com/api/carritos/', {
               ejemplar: [ejemplar.id] 
           }, {
               headers: {
@@ -99,7 +99,7 @@ const store = createStore({
     },
     async removeFromCart({ commit, state }, ejemplarId) {
       try {
-        await axios.delete(`http://127.0.0.1:8000/api/carritos/${ejemplarId}/`, {
+        await axios.delete(`hhttps://liban.onrender.com/api/carritos/${ejemplarId}/`, {
           headers: {
             Authorization: `Token ${state.token}`
           }

@@ -24,7 +24,7 @@
     }
 
     onMounted(() => {
-        axios.get('http://127.0.0.1:8000/api/categorias/')
+        axios.get('https://liban.onrender.com/api/categorias/')
             .then(response => {
                 categorias.value = response.data
             })

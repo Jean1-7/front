@@ -37,7 +37,7 @@ const activeItem = ref({ id: null, type: '' });
 
 const fetchCartItems = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/carritos/', {
+    const response = await axios.get('https://liban.onrender.com/api/carritos/', {
       headers: {
         Authorization: `Token ${store.state.token}`
       }
@@ -73,7 +73,7 @@ const clearActiveItem = () => {
 
 const removeFromCart = async (itemId) => {
   try {
-    await axios.patch(`http://127.0.0.1:8000/api/carritos/${store.state.user_id}/`, {
+    await axios.patch(`https://liban.onrender.com/api/carritos/${store.state.user_id}/`, {
       ejemplar_id: itemId
     }, {
       headers: {

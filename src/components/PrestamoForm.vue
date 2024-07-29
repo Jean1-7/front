@@ -50,7 +50,7 @@
   
   const submitPrestamo = async () => {
     try {
-      await axios.post('http://127.0.0.1:8000/api/prestamos/', {
+      await axios.post('https://liban.onrender.com/api/prestamos/', {
         cliente: store.state.user_id,
         ejemplar: props.ejemplarId,
         FechaDevolver: fechaDevolver.value

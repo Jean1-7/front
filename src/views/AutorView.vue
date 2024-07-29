@@ -70,10 +70,10 @@
   const fetchAutor = async () => {
     const autorId = Number(route.params.id)
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/autores/${autorId}/`)
+      const response = await axios.get(`https://liban.onrender.com/api/autores/${autorId}/`)
       autor.value = response.data
   
-      const otherResponse = await axios.get('http://127.0.0.1:8000/api/ejemplares/')
+      const otherResponse = await axios.get('https://liban.onrender.com/api/ejemplares/')
       otrosEjemplares.value = otherResponse.data.filter(ejemplar => !ejemplar.autor.includes(autorId))
       autorEjemplares.value = otherResponse.data.filter(ejemplar => ejemplar.autor.includes(autorId))
     } catch (error) {

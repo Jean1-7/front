@@ -72,10 +72,10 @@ const isAuthenticated = computed(() => !!store.state.token)
 const fetchEjemplar = async () => {
   const ejemplarId = route.params.id
   try {
-    const response = await axios.get(`http://127.0.0.1:8000/api/ejemplares/${ejemplarId}/`)
+    const response = await axios.get(`https://liban.onrender.com/api/ejemplares/${ejemplarId}/`)
     ejemplar.value = response.data
 
-    const otherResponse = await axios.get('http://127.0.0.1:8000/api/ejemplares/')
+    const otherResponse = await axios.get('https://liban.onrender.com/api/ejemplares/')
     otrosEjemplares.value = otherResponse.data.filter(e => e.id !== parseInt(ejemplarId))
   } catch (error) {
     console.error('Error fetching ejemplar:', error)

@@ -47,7 +47,7 @@
   const fetchResults = async () => {
     if (searchText.value) {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/ejemplares/', {
+        const response = await axios.get('https://liban.onrender.com/api/ejemplares/', {
           params: { search: searchText.value }
         })
         filteredEjemplares.value = response.data

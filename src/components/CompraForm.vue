@@ -34,7 +34,7 @@
   
   const submitCompra = async () => {
     try {
-      await axios.post('http://127.0.0.1:8000/api/ventas/', {
+      await axios.post('https://liban.onrender.com/api/ventas/', {
         cliente: store.state.user_id,
         ejemplar: props.ejemplarId,
         cantidad: cantidad.value
